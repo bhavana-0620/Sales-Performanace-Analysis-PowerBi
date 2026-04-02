@@ -2,7 +2,7 @@
 
 ## 🔗 Live Dashboard
 
-👉 https://app.powerbi.com/view?r=eyJrIjoiMjZkNjk5ZWUtZTNlOC00YmQxLTgwNmUtZDdhMzUwYWRiMGRmIiwidCI6Ijc4NTAyYzI3LTY4ZTktNDA2Ni1iNmVkLWI3NjdjOWE2NDY2OSJ9&pageName=611c2cf82ee90b7c19a8
+👉 https://app.powerbi.com/view?r=eyJrIjoiMjZkNjk5ZWUtZTNlOC00YmQxLTgwNmUtZDdhMzUwYWRiMGRmIiwidCI6Ijc4NTAyYzI3LTY4ZTktNDA2Ni1iNmVkLWI3NjdjOWE2NDY2OSJ9
 
 ---
 
@@ -23,11 +23,11 @@ This project aims to provide a **data-driven solution** to support strategic dec
 
 # 🎯 Business Objectives
 
-* Analyze overall business performance
-* Identify top and bottom-performing products
-* Evaluate channel contribution to revenue and profit
-* Understand geographic sales distribution
-* Provide actionable business insights
+* Analyze overall business performance  
+* Identify top and bottom-performing products  
+* Evaluate channel contribution to revenue and profit  
+* Understand geographic sales distribution  
+* Provide actionable business insights  
 
 ---
 
@@ -35,28 +35,31 @@ This project aims to provide a **data-driven solution** to support strategic dec
 
 ### 🟢 Overall Performance
 
-* How are revenue and profit performing overall?
-* What is the profit margin?
+* How are revenue and profit performing overall?  
+* What is the profit margin?  
 
 ### 🟢 Time Analysis
 
-* How is revenue trending over time?
-* Are there seasonal patterns or declines?
+* How is revenue trending over time?  
+* Are there seasonal patterns or declines?  
+* Are there any sharp drops or anomalies in specific periods?  
 
 ### 🟢 Product Analysis
 
-* Which products generate the most revenue?
-* Which products are underperforming?
+* Which products generate the most revenue?  
+* Which products are underperforming?  
+* How do top and bottom products compare in contribution?  
 
 ### 🟢 Channel Analysis
 
-* Which sales channel contributes the most?
-* How profitable are different channels?
+* Which sales channel contributes the most?  
+* How profitable are different channels?  
+* Are there differences in monthly performance across channels?  
 
 ### 🟢 Geographic Analysis
 
-* Which states or regions drive revenue?
-* Are there regional performance differences?
+* Which states or regions drive revenue?  
+* Are there regional performance differences?  
 
 ---
 
@@ -64,10 +67,10 @@ This project aims to provide a **data-driven solution** to support strategic dec
 
 ## 🔹 1. Data Cleaning & Preparation (Python)
 
-* Converted date columns to proper datetime format
-* Handled missing values and inconsistencies
-* Created derived columns (Year, Month, etc.)
-* Structured data for analysis
+* Converted date columns to proper datetime format  
+* Handled missing values and inconsistencies  
+* Created derived columns (Year, Month, Quarter)  
+* Structured data for analysis  
 
 ---
 
@@ -75,22 +78,24 @@ This project aims to provide a **data-driven solution** to support strategic dec
 
 Performed detailed analysis using Python:
 
-* Revenue trends over time
-* Product performance (Top & Bottom products)
-* Channel-wise revenue distribution
-* Order value distribution
-* Identification of patterns and anomalies
+* Revenue trends over time  
+* Product performance (Top & Bottom products)  
+* Channel-wise revenue distribution  
+* Order value distribution  
+* Identification of patterns and anomalies  
 
 ---
 
 ## 🔹 3. Data Modeling (Power BI)
 
-* Implemented **Star Schema**
+* Implemented **Star Schema**  
 * Created:
 
-  * Fact table (sales data)
-  * Dimension tables (Date, Product, Channel, Location)
-* Established relationships for efficient analysis
+  * Fact table (sales data)  
+  * Dimension tables (Date, Product, Channel, Location)  
+
+* Established relationships for efficient analysis  
+* Ensured correct date hierarchy for accurate time-based visuals  
 
 ---
 
@@ -98,74 +103,98 @@ Performed detailed analysis using Python:
 
 ### 📊 Page 1: Executive Overview
 
-* KPIs: Revenue, Profit, Orders, Profit Margin
-* Revenue trend over time
-* Channel performance
-* Key business insight summary
+* KPIs: Revenue, Profit, Orders, Profit Margin  
+* Revenue trend over time with proper **year and month hierarchy**  
+* Identified noticeable revenue decline in **early 2017 (Q1)**  
+* Interactive tooltip to analyze contributing factors (Revenue, Orders, Revenue per Order, Top Products)  
+* Channel performance overview  
+* Key business insight summary  
 
 ---
 
 ### 📊 Page 2: Product & Channel Analysis
 
-* Top 10 and Bottom 10 products
-* Revenue vs Profitability scatter analysis
-* Channel contribution to profit
+* Interactive **Top 10 and Bottom 10 toggle using bookmarks**  
+* Bottom 10 products correctly sorted (lowest → highest)  
+* Revenue vs Profitability scatter analysis  
+* Channel contribution to profit (Distributor, Export, Wholesale)  
+* Monthly profit trends across channels  
 
 ---
 
 ### 📊 Page 3: Geographic Insights
 
-* Revenue distribution by state
-* Top-performing regions
-* Profit margin by region
+* Revenue distribution by state (map visualization)  
+* Top-performing states by revenue  
+* Profit margin comparison across regions  
+* Clear identification of high-revenue regions  
 
 ---
 
 # 🧠 Key Insights
 
-* Revenue shows seasonal patterns with noticeable fluctuations
-* A small group of products contributes significantly to total revenue
-* Some high-revenue products operate at lower margins
-* Wholesale channel dominates revenue contribution
-* Certain states drive a major share of total sales
+* Revenue shows **fluctuating trends over time**, with a **sharp drop observed in early 2017 (Q1)**  
+
+* The revenue drop is **not driven by total orders**, indicating:
+  * A change in **revenue per order** or **product mix**  
+
+* A small group of products contributes a **large portion of total revenue**, showing dependency on top performers  
+
+* Bottom-performing products generate significantly lower revenue, indicating:
+  * Opportunities for optimization or removal  
+
+* Wholesale channel contributes the **highest share of revenue**, while other channels lag behind  
+
+* Some high-revenue products operate at **lower profit margins**, suggesting pricing or cost inefficiencies  
+
+* Geographic analysis shows:
+  * Certain states contribute significantly more revenue  
+  * Profit margins remain relatively consistent across regions  
 
 ---
 
 # 📊 Business Recommendations
 
-* Improve or discontinue low-performing products
-* Optimize pricing for high-revenue low-margin products
-* Diversify channel strategy beyond wholesale
-* Focus marketing efforts on high-performing regions
+* Investigate the **revenue decline in 2017 Q1**, focusing on:
+  * Revenue per order  
+  * Product performance changes  
+
+* Optimize or discontinue **low-performing products**  
+
+* Improve margins for **high-revenue but low-profit products**  
+
+* Reduce dependency on **Wholesale channel** by strengthening other channels  
+
+* Focus marketing and expansion strategies on **high-performing regions**  
 
 ---
 
 # 🛠 Tools & Technologies
 
-* Python (Pandas, Matplotlib, Seaborn)
-* Power BI
-* DAX
-* Data Modeling (Star Schema)
+* Python (Pandas, Matplotlib, Seaborn)  
+* Power BI  
+* DAX  
+* Data Modeling (Star Schema)  
 
 ---
 
 # 📂 Project Structure
 
-* `data/` → Sales_Analysis_Dataset
-* `notebook/` → EDA and data preparation
-* `dashboard/` → Power BI (.pbix) file
-* `images/` → Dashboard screenshots
+* `data/` → Sales_Analysis_Dataset  
+* `notebook/` → EDA and data preparation  
+* `dashboard/` → Power BI (.pbix) file  
+* `images/` → Dashboard screenshots  
 
 ---
 
 # 🚀 How to Use
 
-1. Open the live dashboard using the link above
-2. Download `.pbix` file for detailed exploration
-3. Review notebook for full analysis process
+1. Open the live dashboard using the link above  
+2. Download `.pbix` file for detailed exploration  
+3. Review notebook for full analysis process  
 
 ---
 
 # 👤 Author
 
-Bhavana
+Bhavana  
